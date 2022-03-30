@@ -1,0 +1,43 @@
+﻿@{ ViewData["Title"] = "Add a bowler"; }
+
+@model Bowler
+
+
+
+    @*Form which is linked to the model using asp-for=""*@
+<form method="post">
+    
+    <input type="hidden" asp-for="BowlerID" />
+    
+    
+
+    <label asp-for="BowlerFirstName">First Name:</label>
+    <input type="text" asp-for="BowlerFirstName" maxlength="50" required /><br />
+
+    <label asp-for="BowlerMiddleInit">Middle Inital:</label>
+    <input type="text" asp-for="BowlerMiddleInit" maxlength="1" /><br />
+
+    <label asp-for="BowlerLastName">Last Name:</label>
+    <input type="text" asp-for="BowlerLastName" maxlength="50" required /><br />
+
+    <label asp-for="BowlerAddress">Address:</label>
+    <input type="text" asp-for="BowlerAddress" maxlength="50" required /><br />
+
+    <label asp-for="BowlerCity">City:</label>
+    <input type="text" asp-for="BowlerCity" maxlength="50" required /><br />
+
+    <label asp-for="BowlerState">State:</label>
+    <input type="text" asp-for="BowlerState" pattern=".{2}" required title="2 character state code" /><br />
+
+    <label asp-for="BowlerZip">Zip:</label>
+    <input type="number" asp-for="BowlerZip" maxlength="50" /><br />
+
+    <label asp-for="BowlerPhoneNumber">Phone Number:</label>
+    <input type="tel" asp-for="BowlerPhoneNumber" maxlength="14" /><br />
+    
+    <label asp-for="TeamID">Team ID:</label>
+    <input type="number" asp-for="TeamID" required /><br />
+
+    <button type="submit" class="btn btn-secondary">Add Bowler</button>
+
+</form>
